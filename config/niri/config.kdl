@@ -10,7 +10,8 @@
 prefer-no-csd
 
 input {
-    keyboard {
+	mod-key "Alt"
+	keyboard {
         
         repeat-rate 35
         repeat-delay 200

@@ -10,8 +10,6 @@
 
     pyroclear.url = "github:shreyanth-sureshkrishnaa/pyroclear";
 
-    ly-balatro.url = "github:sophronesis/nix-ly-balatro-theme";
-
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +23,6 @@
       nixpkgs,
       pyroclear,
       home-manager,
-      ly-balatro,
       noctalia,
       ...
     }:
@@ -35,15 +32,12 @@
 
         specialArgs = {
           inherit inputs;
-          inherit ly-balatro;
         };
 
         modules = [
           ./configuration.nix
 
           noctalia.nixosModules.default
-
-          ly-balatro.nixosModules.default
 
           home-manager.nixosModules.home-manager
           {

@@ -12,7 +12,6 @@ let
     nvim = "nvim";
     alacritty = "alacritty";
     ranger = "ranger";
-    librewolf = "librewolf";
     niri = "niri";
     noctalia = "noctalia";
   };
@@ -31,6 +30,7 @@ in
       vim = "nvim";
       clear = "pyroclear --random";
       nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#aldia";
+      up = "sudo nix flake update && sudo nixos-rebuild switch --flake ~/nixos-dotfiles#aldia";
     };
   };
 
@@ -48,6 +48,7 @@ in
     source = create_symlink "${dotfiles}/${subpath}";
     recursive = true;
   }) configs;
+
   #Program configs.
   programs.rofi = {
     enable = true;

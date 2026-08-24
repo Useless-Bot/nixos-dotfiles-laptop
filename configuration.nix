@@ -43,7 +43,7 @@
     enable = true;
     settings = { 
     default_session = { 
-      command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd niri";
+      command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd niri-session";
       };
     };
   };
@@ -72,17 +72,19 @@
     librewolf
     mullvad-vpn
     bat
+    btop
+    tree-sitter
     xclip
     burpsuite
     tealdeer
     keepassxc
     nmap
-    pulsemixer
     luarocks
     gnumake
     unzip
     zig
     quickshell
+    lua-language-server
     swaybg
     xwayland-satellite
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default

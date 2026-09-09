@@ -24,6 +24,10 @@
   security.rtkit.enable =true;
   services.upower.enable = true;
 
+  #Virtualization
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
   boot.loader.systemd-boot = {
     enable = true;
     configurationLimit = 5;
@@ -53,6 +57,7 @@
     extraGroups = [
       "wheel"
       "audio"
+      "libvirtd"
     ];
 
     packages = with pkgs; [
@@ -63,6 +68,7 @@
 
   environment.systemPackages = with pkgs; [
     neovim
+    dnsmasq
     fastfetch
     wget
     alacritty

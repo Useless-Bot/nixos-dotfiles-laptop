@@ -66,6 +66,8 @@ in
     };
   };
 
+  home.file.".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
+
   services.udiskie = {
     enable = true;
     settings = {
